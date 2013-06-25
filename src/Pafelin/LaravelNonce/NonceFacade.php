@@ -10,6 +10,6 @@ class NonceFacade extends Facade {
      *
      * @return string
      */
-    protected static function getFacadeAccessor() { return 'Nonce'; }
+    protected static function getFacadeAccessor() { return 'nonce'; }
 
 }

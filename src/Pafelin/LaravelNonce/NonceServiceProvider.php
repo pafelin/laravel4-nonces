@@ -19,7 +19,7 @@ class NonceServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
-        $this->package('pafelin/laravel-nonce');
+        $this->package('Pafelin/LaravelNonce');
     }
 
     /**
