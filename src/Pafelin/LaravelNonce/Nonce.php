@@ -4,16 +4,17 @@ namespace Pafelin\LaravelNonce;
 
 class Nonce {
 
-    protected $lenght = 10;
+    protected $length = 16;
 
-    protected $nonce_life = 3600; //1 hour
+    protected $nonceLife = 60;
 
-    public function __construct(){
-        //get the current user's username
+    public function __construct($length, $nonceLife){
+        $this->length = (int) $length;
+        $this->nonceLife = (int) $nonceLife;
     }
 
     public function generate($username) {
-        return substr($this->hash($this->tick() . $username), -12, $this->lenght);
+        return substr($this->hash($this->tick() . $username), -12, $this->length);
     }
 
     protected function tick() {

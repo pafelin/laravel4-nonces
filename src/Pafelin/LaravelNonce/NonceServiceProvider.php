@@ -31,7 +31,7 @@ class NonceServiceProvider extends ServiceProvider {
     {
         $this->app['nonce'] = $this->app->share(function($app)
         {
-            return new Nonce;
+            return new Nonce(Config::get('LaravelNonce::length'), Config::get('LaravelNonce::nonceLife'));
         });
     }
 
