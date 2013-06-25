@@ -14,7 +14,7 @@ class Nonce {
     }
 
     public function generate($username) {
-        return substr($this->hash($this->tick() . $username), -12, $this->length);
+        return substr($this->hash($this->tick() . $username), 0, $this->length);
     }
 
     protected function tick() {
