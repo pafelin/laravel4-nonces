@@ -2,6 +2,7 @@
 namespace Pafelin\LaravelNonce;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Config;
 
 class NonceServiceProvider extends ServiceProvider {
 
