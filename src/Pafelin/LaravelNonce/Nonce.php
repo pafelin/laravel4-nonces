@@ -18,7 +18,7 @@ class Nonce {
     }
 
     protected function tick() {
-        return ceil(time() / ( $this->nonceLife / 2 ));
+        return ceil(time() / $this->nonceLife );
     }
 
     protected function hash($data){
