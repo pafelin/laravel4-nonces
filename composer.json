@@ -1,5 +1,5 @@
 {
-    "name": "pafelin/laravelNonce",
+    "name": "pafelin/laravel-nonce",
     "description": "Generete nonces",
     "keywords": ["nonce","laravel4","illuminate","generator"],
     "license": "MIT",
