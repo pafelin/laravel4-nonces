@@ -13,12 +13,14 @@ Add to
         ....
     )
 and to
+
     'aliases' => array(
         ....
         'Nonce' => 'Pafelin\LaravelNonce\NonceFacade',
     );
 
 When you want to generate a nonce
+
     $nonce = Nonce::generate('some_identification_string');
 
 ## Contact
