@@ -6,16 +6,14 @@ class Nonce {
 
     protected $lenght = 10;
 
-    protected $user_hash = ''; //md5($this->username)
-
     protected $nonce_life = 3600; //1 hour
 
     public function __construct(){
         //get the current user's username
     }
 
-    public function generate() {
-        return substr($this->hash($this->tick() . $this->user_hash), -12, $this->lenght);
+    public function generate($username) {
+        return substr($this->hash($this->tick() . $username), -12, $this->lenght);
     }
 
     protected function tick() {
