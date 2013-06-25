@@ -1,0 +1,21 @@
+{
+    "name": "pafelin/laravelNonce",
+    "description": "Generete nonces",
+    "keywords": ["nonce","laravel4","illuminate","generator"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pavel Genov",
+            "email": "pavel@taskprocess.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Pafelin\\LaravelNonce": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
