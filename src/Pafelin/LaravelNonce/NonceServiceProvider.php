@@ -20,7 +20,7 @@ class NonceServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
-        $this->package('Pafelin/LaravelNonce');
+        $this->package('pafelin/laravel-nonce');
     }
 
     /**
@@ -32,7 +32,7 @@ class NonceServiceProvider extends ServiceProvider {
     {
         $this->app['nonce'] = $this->app->share(function($app)
         {
-            return new Nonce(Config::get('LaravelNonce::length'), Config::get('LaravelNonce::nonceLife'));
+            return new Nonce($app['config']['laravel-nonce::length'], $app['config']['laravel-nonce::nonceLife']);
         });
     }
 
