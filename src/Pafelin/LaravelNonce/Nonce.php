@@ -4,11 +4,11 @@ namespace Pafelin\LaravelNonce;
 
 class Nonce {
 
-    protected $length = 16;
+    protected $length;
 
-    protected $nonceLife = 60;
+    protected $nonceLife;
 
-    public function __construct($length, $nonceLife){
+    public function __construct($length = 16, $nonceLife = 60){
         $this->length = (int) $length;
         $this->nonceLife = (int) $nonceLife;
     }
