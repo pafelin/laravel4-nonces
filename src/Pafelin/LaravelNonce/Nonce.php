@@ -8,7 +8,7 @@ class Nonce {
 
     protected $nonceLife;
 
-    public function __construct($length = 16, $nonceLife = 60){
+    public function __construct($length = 16, $nonceLife = 120){
         $this->length = (int) $length;
         $this->nonceLife = (int) $nonceLife;
     }
@@ -18,7 +18,7 @@ class Nonce {
     }
 
     protected function tick() {
-        return ceil(time() / $this->nonceLife );
+        return ceil(intval(time() / 100) / $this->nonceLife );
     }
 
     protected function hash($data){
